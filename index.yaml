@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  whoami:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-08-10T10:44:32.219032755Z"
+    description: A Helm chart for Kubernetes
+    digest: b044b9bafb868dbd909df8d9986ea99b8b2b27199406816542349cb5eed5e48b
+    name: whoami
+    type: application
+    urls:
+    - https://github.com/rustamar/helm-charts/releases/download/whoami-0.1.0/whoami-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-08-10T10:44:32.219038455Z"
