@@ -1,0 +1,11 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: TraefikService
+metadata:
+  name: {{ include "rollouts-demo.fullname" . }}
+spec:
+  weighted:
+    services:
+      - name: {{ include "rollouts-demo.fullname" . }}-stable
+        port: {{ .Values.service.port }}
+      - name: {{ include "rollouts-demo.fullname" . }}-canary
+        port: {{ .Values.service.port }}

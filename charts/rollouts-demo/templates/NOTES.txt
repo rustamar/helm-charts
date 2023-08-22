@@ -1,0 +1,5 @@
+
+
+https://{{ .Values.gateway.host }}
+
+kubectl argo rollouts get rollout {{ include "rollouts-demo.fullname" . }}

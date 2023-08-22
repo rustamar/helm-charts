@@ -1,0 +1,11 @@
+apiVersion: externaldns.k8s.io/v1alpha1
+kind: DNSEndpoint
+metadata:
+  name: {{ include "rollouts-demo.fullname" . }}
+spec:
+  endpoints:
+    - dnsName: {{ .Values.gateway.host }}
+      recordTTL: 300
+      recordType: CNAME
+      targets:
+        - {{ .Values.gateway.target }}
